@@ -1,0 +1,18 @@
+.article-label {
+    font-weight: 500;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;
+    border-radius: 10%;
+    padding: 2rem;
+}
+
+.article-label.selected {
+    background-color: green;
+}
+
+
+.article-input {
+    display: none;
+}

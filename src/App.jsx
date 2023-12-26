@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import './App.css'
+import Articles from './components/Articles/Articles'
 import questions from './data/questions.json'
 
 function App() {
   const [radioValue, setRadioValue] = useState();
-  const handleRadioChange = (e) => {
+  const handleArticlesChange = (e) => {
     setRadioValue(e.target.value);
   }
 
@@ -16,9 +17,7 @@ function App() {
         </header>
         <main className="main">
           <div>
-            <label>der<input type='radio' hidden name="article" value="der" onChange={handleRadioChange}></input></label>
-            <label>die<input type='radio' hidden name="article" value="die" onChange={handleRadioChange}></input></label>
-            <label>das<input type='radio' hidden name="article" value="das" onChange={handleRadioChange}></input></label>
+            <Articles value={radioValue} onChange={handleArticlesChange} />
           </div>
           <br/>
           <br/>
